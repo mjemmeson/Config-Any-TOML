@@ -2,17 +2,15 @@ use strict;
 use warnings;
 package Config::Any::TOML;
 
+# VERSION
+
+# ABSTRACT: Load TOML config files
+
 use base 'Config::Any::Base';
-
-=head1 NAME
-
-Config::Any::TOML - Load TOML config files
 
 =head1 DESCRIPTION
 
-Loads TOML files. Example:
-
-#TODO
+Loads TOML files. See L<https://github.com/mojombo/toml>
 
 =head1 METHODS
 
