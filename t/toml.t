@@ -16,7 +16,7 @@ subtest 'TOML' => sub {
     # test invalid config
 
     my $file = 't/invalid/conf.toml';
-    my $config = eval { Config::Any::TOML->load($file) };
+    $config = eval { Config::Any::TOML->load($file) };
 
     ok( !$config, 'config load failed' );
     ok( $@,       "error thrown ($@)" );
