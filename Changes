@@ -2,6 +2,8 @@ Revision history for {{$dist->name}}
 
 {{$NEXT}}
 
+  - POD tidy and correct 'requires_any_of' method name
+
 0.001     2013-12-02 09:04:54 Europe/London
 
   - Initial release
