@@ -14,9 +14,9 @@ Loads TOML files. See L<https://github.com/mojombo/toml>
 
 =head1 METHODS
 
-=head2 extensions( )
+=head2 extensions()
 
-return an array of valid extensions (C<ini>).
+return an array of valid extensions (C<toml>).
 
 =cut
 
@@ -48,7 +48,7 @@ sub load {
     return $data;
 }
 
-=head2 requires_one_of( )
+=head2 requires_any_of()
 
 Specifies that this module requires one of the following TOML modules in order
 to work.
@@ -63,7 +63,7 @@ L<TOML>
 
 =cut
 
-sub requires_one_of { 'TOML' }
+sub requires_any_of { 'TOML' }
 
 =head1 SEE ALSO
 
