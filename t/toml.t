@@ -3,6 +3,7 @@ use warnings;
 
 use Test::More;
 use Config::Any::TOML;
+use utf8;
 
 subtest 'TOML' => sub {
     if ( !Config::Any::TOML->is_supported ) {
@@ -12,6 +13,7 @@ subtest 'TOML' => sub {
     my $config = Config::Any::TOML->load('t/conf/conf.toml');
     ok($config);
     is( $config->{title}, 'TOML Example' );
+    is( $config->{servers}{beta}{country}, '中国' );
 
     # test invalid config
 

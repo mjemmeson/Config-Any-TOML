@@ -35,12 +35,15 @@ sub load {
     my $file  = shift;
 
     open( my $fh, $file ) or die $!;
+    binmode $fh;
+
     my $content = do { local $/; <$fh> };
     close $fh;
 
+    require Encode;
     require TOML;
 
-    my ( $data, $err ) = TOML::from_toml($content);
+    my ( $data, $err ) = TOML::from_toml( Encode::decode('UTF-8', $content ) );
         unless ($data) {
         die "Error parsing toml: $err";
     }
